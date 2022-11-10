@@ -19,7 +19,7 @@ function checksExistsUserAccount(request, response, next) {
 
     // Vai verificar se contém o username
     if(!listUsers) {
-      return response.status(400).json({ error: "User not found" })
+      return response.status(404).json({ error: "User not found" })
     }
 
     request.user = listUsers
