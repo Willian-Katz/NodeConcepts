@@ -44,7 +44,7 @@ app.post('/users', (request, response) => {
   const usersAlreadyExists = users.some((user) => user.username === username);
 
   if (usersAlreadyExists) {
-      return response.status(400).json({ error: "Customer already exists!" })
+      return response.status(400).json({ error: "user already exists!" })
   }
 
   users.push({
